@@ -7,7 +7,8 @@ const {
   AIAttributeLevelsBehavior, AITraitsBehavior
 } = require('oni-save-parser')
 
-const folder = '~/Library/Application Support/unity.Klei.Oxygen Not Included/cloud_save_files/76561198090025344/Galaxy/'
+const homedir = require('os').homedir()
+const folder = homedir + '/Library/Application Support/unity.Klei.Oxygen Not Included/cloud_save_files/76561198090025344/Galaxy/'
 
 
 function loadFile(fileName) {
@@ -20,7 +21,7 @@ function saveFile(fileName, save) {
   writeFileSync(`${folder}/${fileName}.sav`, new Uint8Array(fileData))
 }
 
-function addTrait(trait, name ) {
+function addTrait(trait, name) {
   if (trait.templateData.TraitIds.indexOf(name) === -1) {
     trait.templateData.TraitIds.push(name)
   }
@@ -54,43 +55,43 @@ for (const minion of minions.gameObjects) {
   console.log(trait.templateData.TraitIds)
 
   // FastLearner StrongImmuneSystem  GrantSkill_Mining3 | SparkleStreaker SuperProductive
-  const superTraits  =[
-    "FastLearner",
-    "StrongImmuneSystem",
-    "SparkleStreaker",
-    "SuperProductive",
-    "IronGut",
+  const superTraits = [
+    'FastLearner',
+    'StrongImmuneSystem',
+    'SparkleStreaker',
+    'SuperProductive',
+    'IronGut',
     // "InteriorDecorator",
 
     // ---------
-    "GrantSkill_Suits1",
-    "GrantSkill_Engineering1",
-    "GrantSkill_Basekeeping1",
-    "GrantSkill_Basekeeping2",
-    "GrantSkill_Technicals1",
-    "GrantSkill_Technicals2",
-    "GrantSkill_Arting1",
-    "GrantSkill_Arting2",
-    "GrantSkill_Arting3",
-    "GrantSkill_Medicine1",
-    "GrantSkill_Medicine2",
-    "GrantSkill_Medicine3",
-    "GrantSkill_Mining1",
-    "GrantSkill_Mining2",
-    "GrantSkill_Mining3",
-    "GrantSkill_Mining4",
-    "GrantSkill_Hauling1",
-    "GrantSkill_Hauling2",
-    "GrantSkill_Building1",
-    "GrantSkill_Building2",
-    "GrantSkill_Building3",
-    "GrantSkill_Researching1",
-    "GrantSkill_Researching2",
-    "GrantSkill_Researching3",
-    "GrantSkill_Researching4",
-    "DeeperDiversLungs",
-    "Regeneration",
-    "SunnyDisposition"
+    'GrantSkill_Suits1',
+    'GrantSkill_Engineering1',
+    'GrantSkill_Basekeeping1',
+    'GrantSkill_Basekeeping2',
+    'GrantSkill_Technicals1',
+    'GrantSkill_Technicals2',
+    'GrantSkill_Arting1',
+    'GrantSkill_Arting2',
+    'GrantSkill_Arting3',
+    'GrantSkill_Medicine1',
+    'GrantSkill_Medicine2',
+    'GrantSkill_Medicine3',
+    'GrantSkill_Mining1',
+    'GrantSkill_Mining2',
+    'GrantSkill_Mining3',
+    'GrantSkill_Mining4',
+    'GrantSkill_Hauling1',
+    'GrantSkill_Hauling2',
+    'GrantSkill_Building1',
+    'GrantSkill_Building2',
+    'GrantSkill_Building3',
+    'GrantSkill_Researching1',
+    'GrantSkill_Researching2',
+    'GrantSkill_Researching3',
+    'GrantSkill_Researching4',
+    'DeeperDiversLungs',
+    'Regeneration',
+    'SunnyDisposition'
   ]
 
   trait.templateData.TraitIds = superTraits
