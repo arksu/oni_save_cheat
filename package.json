@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "oni-save-parser": "file:../oni-save-parser",
+    "text-encoding": "0.6.4"
+  }
+}
