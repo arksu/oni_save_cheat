@@ -7,7 +7,7 @@ const {
   AIAttributeLevelsBehavior, AITraitsBehavior
 } = require('oni-save-parser')
 
-const folder = '/Users/park/Library/Application Support/unity.Klei.Oxygen Not Included/cloud_save_files/76561198090025344/Galaxy/'
+const folder = '~/Library/Application Support/unity.Klei.Oxygen Not Included/cloud_save_files/76561198090025344/Galaxy/'
 
 
 function loadFile(fileName) {
@@ -96,19 +96,6 @@ for (const minion of minions.gameObjects) {
   trait.templateData.TraitIds = superTraits
 
   // addTrait(trait, "GrantSkill_Suits1")
-  // addTrait(trait, "GrantSkill_Engineering1")
-  // addTrait(trait, "GrantSkill_Basekeeping1")
-  // addTrait(trait, "GrantSkill_Basekeeping2")
-  // addTrait(trait, "GrantSkill_Mining3")
-  // addTrait(trait, "GrantSkill_Mining4")
-  // addTrait(trait, "GrantSkill_Hauling2")
-  // addTrait(trait, "GrantSkill_Building2")
-  // addTrait(trait, "GrantSkill_Building3")
-  // addTrait(trait, "GrantSkill_Researching1")
-  // addTrait(trait, "GrantSkill_Researching2")
-  // addTrait(trait, "GrantSkill_Researching3")
-  // addTrait(trait, "GrantSkill_Researching4")
-
   const skillBehavior = getBehavior(minion, AIAttributeLevelsBehavior)
 
   // Set each attribute to 10
