@@ -102,7 +102,7 @@ for (const minion of minions.gameObjects) {
   // Set each attribute to 10
   for (const attribute of skillBehavior.templateData.saveLoadLevels) {
     // console.log(attribute);
-    attribute.level = 170
+    attribute.level = 200
   }
 }
 
